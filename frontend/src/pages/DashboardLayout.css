@@ -1,0 +1,25 @@
+.dashboard-shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+}
+
+.dashboard-shell__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-shell__content {
+  padding: var(--space-lg);
+}
+
+@media (max-width: 720px) {
+  .dashboard-shell {
+    flex-direction: column;
+  }
+
+  .dashboard-shell__content {
+    padding: var(--space-md);
+    padding-bottom: 80px; /* clear the fixed mobile sidebar */
+  }
+}
