@@ -1,0 +1,206 @@
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.hero__text h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.hero__text p {
+  margin-top: var(--space-sm);
+  font-size: 1.1rem;
+  max-width: 40ch;
+}
+
+.hero__actions {
+  margin-top: var(--space-md);
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.hero__art {
+  display: flex;
+  justify-content: center;
+}
+
+.hero__illustration {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+
+/* Reviews */
+.reviews {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.reviews__stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.reviews__stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--accent-orange);
+}
+
+.reviews__stat span {
+  color: var(--fc-muted);
+  font-size: 0.85rem;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.review-card {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  padding: var(--space-md);
+  margin: 0;
+}
+
+.review-card p {
+  color: var(--fc-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.review-card footer {
+  margin-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card footer span {
+  color: var(--fc-muted);
+  font-size: 0.85rem;
+}
+
+/* Feature sections */
+.feature {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.feature--reverse {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.feature--reverse .feature__art {
+  order: 2;
+}
+
+.feature__illustration {
+  width: 100%;
+  max-width: 380px;
+}
+
+.feature__eyebrow {
+  display: inline-block;
+  color: var(--accent-orange);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-xs);
+}
+
+.feature__text h2 {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.feature__text p {
+  margin-top: var(--space-sm);
+  max-width: 44ch;
+}
+
+/* About */
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-2xl);
+}
+
+.about__inner {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  padding: var(--space-lg);
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about__inner h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.about__inner p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.site-footer {
+  text-align: center;
+  padding: var(--space-lg);
+  color: var(--fc-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .feature,
+  .feature--reverse {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .feature--reverse .feature__art {
+    order: 0;
+  }
+
+  .hero__text p {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .feature__text p {
+    max-width: none;
+  }
+
+  .reviews__grid {
+    grid-template-columns: 1fr;
+  }
+}
